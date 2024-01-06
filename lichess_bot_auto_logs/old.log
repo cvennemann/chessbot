@@ -1,0 +1,321 @@
+2024-01-06 21:26:53,367 __main__ (lichess-bot.py:1026) INFO 
+    .   _/|
+    .  // o\
+    .  || ._)  lichess-bot 2024.1.5.1
+    .  //__\
+    .  )___(   Play on Lichess with a bot
+    
+2024-01-06 21:26:53,441 config (config.py:261) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./engines/
+  name: RandomMove
+  working_dir: ''
+  protocol: homemade
+  ponder: true
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  uci_options:
+    Move Overhead: 100
+    Threads: 4
+    Hash: 512
+    SyzygyPath: ./syzygy/
+    UCI_ShowWDL: true
+  silence_stderr: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 2000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 600
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - blitz
+  modes:
+  - rated
+  max_recent_bot_challenges: 2
+  bullet_requires_increment: false
+greeting:
+  hello: Hi! I'm {me}. Good luck!
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}.
+  goodbye_spectators: Thanks for watching!
+  pgn_directory: game_records
+matchmaking:
+  allow_matchmaking: true
+  challenge_variant: random
+  challenge_timeout: 1
+  challenge_initial_time:
+  - 300
+  challenge_increment:
+  - 0
+  opponent_rating_difference: 300
+  rating_preference: none
+  opponent_allow_tos_violation: false
+  challenge_mode: rated
+  challenge_filter: none
+
+2024-01-06 21:26:53,443 config (config.py:262) DEBUG ====================
+2024-01-06 21:26:53,451 config (config.py:261) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./engines/
+  name: RandomMove
+  working_dir: E:\programming and shit\chess\chessbot
+  protocol: homemade
+  ponder: true
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+    max_depth: .inf
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  uci_options:
+    Move Overhead: 100
+    Threads: 4
+    Hash: 512
+    SyzygyPath: ./syzygy/
+    UCI_ShowWDL: true
+  silence_stderr: false
+  uci_ponder: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 2000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+  uci_ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 600
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - blitz
+  modes:
+  - rated
+  max_recent_bot_challenges: 2
+  bullet_requires_increment: false
+  block_list: []
+  allow_list: []
+greeting:
+  hello: Hi! I'm {me}. Good luck!
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}.
+  goodbye_spectators: Thanks for watching!
+  pgn_directory: game_records
+matchmaking:
+  allow_matchmaking: true
+  challenge_variant: random
+  challenge_timeout: 1
+  challenge_initial_time:
+  - 300
+  challenge_increment:
+  - 0
+  opponent_rating_difference: 300
+  rating_preference: none
+  opponent_allow_tos_violation: false
+  challenge_mode: rated
+  challenge_filter: none
+  block_list: []
+  challenge_days:
+  - null
+  opponent_min_rating: 600
+  opponent_max_rating: 4000
+  overrides: {}
+pgn_file_grouping: game
+
+2024-01-06 21:26:53,451 config (config.py:262) DEBUG ====================
+2024-01-06 21:26:53,452 __main__ (lichess-bot.py:1029) INFO Checking engine configuration ...
+2024-01-06 21:26:53,454 engine_wrapper (engine_wrapper.py:67) DEBUG Starting engine: ['E:\\programming and shit\\chess\\chessbot\\engines\\RandomMove']
+2024-01-06 21:26:53,454 __main__ (lichess-bot.py:1032) INFO Engine configuration OK
+2024-01-06 21:26:53,457 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2024-01-06 21:26:55,621 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/token/test HTTP/1.1" 200 None
+2024-01-06 21:26:55,655 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account HTTP/1.1" 200 None
+2024-01-06 21:26:55,656 __main__ (lichess-bot.py:1041) INFO Welcome BeepDuel!
+2024-01-06 21:26:55,666 __main__ (lichess-bot.py:209) INFO You're now connected to https://lichess.org/ and awaiting challenges.
+2024-01-06 21:26:56,285 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account/playing HTTP/1.1" 200 None
+2024-01-06 21:26:56,288 matchmaking (matchmaking.py:273) INFO Next challenge will be created after 21:27:56 (150 challenges in last 24 hours)
+2024-01-06 21:27:12,069 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameStart', 'game': {'fullId': 'D1L8wDRglBVi', 'gameId': 'D1L8wDRg', 'fen': 'rnbqkbnr/pp1ppppp/8/2p4Q/4P3/8/PPPP1PPP/RNB1KBNR b KQkq - 1 2', 'color': 'black', 'lastMove': 'd1h5', 'source': 'friend', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': True, 'hasMoved': True, 'opponent': {'id': 'king-forward-bot', 'username': 'BOT king-forward-bot', 'rating': 1037}, 'isMyTurn': True, 'secondsLeft': 250, 'compat': {'bot': True, 'board': True}, 'id': 'D1L8wDRg'}}
+2024-01-06 21:27:12,069 __main__ (lichess-bot.py:257) INFO --- Process Used. Count: 1. IDs: {'D1L8wDRg'}
+2024-01-06 21:27:12,099 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2024-01-06 21:27:27,305 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/bot/game/stream/D1L8wDRg HTTP/1.1" 200 None
+2024-01-06 21:27:27,307 __mp_main__ (lichess-bot.py:575) DEBUG Initial state: {'id': 'D1L8wDRg', 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'speed': 'blitz', 'perf': {'name': 'Blitz'}, 'rated': True, 'createdAt': 1704572735606, 'white': {'id': 'king-forward-bot', 'name': 'king-forward-bot', 'title': 'BOT', 'rating': 1037}, 'black': {'id': 'beepduel', 'name': 'BeepDuel', 'title': 'BOT', 'rating': 743}, 'initialFen': 'startpos', 'clock': {'initial': 300000, 'increment': 0}, 'type': 'gameFull', 'state': {'type': 'gameState', 'moves': 'e2e4 c7c5 d1h5', 'wtime': 264970, 'btime': 234830, 'winc': 0, 'binc': 0, 'status': 'started'}}
+2024-01-06 21:27:27,311 engine_wrapper (engine_wrapper.py:67) DEBUG Starting engine: ['E:\\programming and shit\\chess\\chessbot\\engines\\RandomMove']
+2024-01-06 21:27:27,312 __mp_main__ (lichess-bot.py:581) DEBUG The engine for game D1L8wDRg has pid=?
+2024-01-06 21:27:27,312 __mp_main__ (lichess-bot.py:584) INFO +++ https://lichess.org/D1L8wDRg/black Blitz vs BOT king-forward-bot (1037) (D1L8wDRg)
+2024-01-06 21:27:27,314 __mp_main__ (lichess-bot.py:691) INFO 
+2024-01-06 21:27:27,315 __mp_main__ (lichess-bot.py:692) INFO move: 2
+2024-01-06 21:27:27,316 engine_wrapper (engine_wrapper.py:674) INFO Searching for wtime 264970 btime 232828 for game D1L8wDRg
+2024-01-06 21:27:27,317 engine_wrapper (engine_wrapper.py:297) INFO Source: Engine
+2024-01-06 21:27:27,322 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (2): lichess.org:443
+2024-01-06 21:27:29,554 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/D1L8wDRg/move/g7g5?offeringDraw=false HTTP/1.1" 200 11
+2024-01-06 21:27:29,555 __mp_main__ (lichess-bot.py:700) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 c7c5 d1h5 g7g5', 'wtime': 264970, 'btime': 232590, 'winc': 0, 'binc': 0, 'status': 'started'}
+2024-01-06 21:27:33,094 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameStart', 'game': {'fullId': 'D1L8wDRglBVi', 'gameId': 'D1L8wDRg', 'fen': 'rnbqkbnr/pp1ppp1p/8/2p3pQ/4P3/8/PPPP1PPP/RNB1KBNR w KQkq - 0 3', 'color': 'black', 'lastMove': 'g7g5', 'source': 'friend', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': True, 'hasMoved': True, 'opponent': {'id': 'king-forward-bot', 'username': 'BOT king-forward-bot', 'rating': 1037}, 'isMyTurn': False, 'secondsLeft': 233, 'compat': {'bot': True, 'board': True}, 'id': 'D1L8wDRg'}}
+2024-01-06 21:27:33,094 __main__ (lichess-bot.py:257) INFO --- Process Used. Count: 1. IDs: {'D1L8wDRg'}
+2024-01-06 21:27:33,120 urllib3.connectionpool (connectionpool.py:1052) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2024-01-06 21:27:33,149 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameStart', 'game': {'fullId': 'D1L8wDRglBVi', 'gameId': 'D1L8wDRg', 'fen': 'rnbqkbnr/pp1ppp1p/8/2p3pQ/4P3/8/PPPP1PPP/RNB1KBNR w KQkq - 0 3', 'color': 'black', 'lastMove': 'g7g5', 'source': 'friend', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': True, 'hasMoved': True, 'opponent': {'id': 'king-forward-bot', 'username': 'BOT king-forward-bot', 'rating': 1037}, 'isMyTurn': False, 'secondsLeft': 233, 'compat': {'bot': True, 'board': True}, 'id': 'D1L8wDRg'}}
+2024-01-06 21:27:33,150 __main__ (lichess-bot.py:257) INFO --- Process Used. Count: 1. IDs: {'D1L8wDRg'}
+2024-01-06 21:27:33,208 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'gameStart', 'game': {'fullId': 'D1L8wDRglBVi', 'gameId': 'D1L8wDRg', 'fen': 'rnbqkbnr/pp1ppp1p/8/2p3pQ/4P3/8/PPPP1PPP/RNB1KBNR w KQkq - 0 3', 'color': 'black', 'lastMove': 'g7g5', 'source': 'friend', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': True, 'hasMoved': True, 'opponent': {'id': 'king-forward-bot', 'username': 'BOT king-forward-bot', 'rating': 1037}, 'isMyTurn': False, 'secondsLeft': 233, 'compat': {'bot': True, 'board': True}, 'id': 'D1L8wDRg'}}
+2024-01-06 21:27:33,209 __main__ (lichess-bot.py:257) INFO --- Process Used. Count: 1. IDs: {'D1L8wDRg'}
+2024-01-06 21:27:33,271 __main__ (lichess-bot.py:373) DEBUG Event: {'type': 'terminated', 'error': 'Traceback (most recent call last):\n  File "E:\\programming and shit\\chess\\chessbot\\lichess-bot.py", line 89, in watch_control_stream\n    response = li.get_event_stream()\n  File "E:\\programming and shit\\chess\\chessbot\\lichess.py", line 293, in get_event_stream\n    return self.api_get("stream_event", stream=True, timeout=15)\n  File "E:\\programming and shit\\chess\\lichess-bot\\venv\\lib\\site-packages\\backoff\\_sync.py", line 105, in retry\n    ret = target(*args, **kwargs)\n  File "E:\\programming and shit\\chess\\chessbot\\lichess.py", line 138, in api_get\n    response.raise_for_status()\n  File "E:\\programming and shit\\chess\\lichess-bot\\venv\\lib\\site-packages\\requests\\models.py", line 1021, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://lichess.org/api/stream/event\n'}
+2024-01-06 21:27:33,271 __main__ (lichess-bot.py:317) DEBUG Terminating exception:
+Traceback (most recent call last):
+  File "E:\programming and shit\chess\chessbot\lichess-bot.py", line 89, in watch_control_stream
+    response = li.get_event_stream()
+  File "E:\programming and shit\chess\chessbot\lichess.py", line 293, in get_event_stream
+    return self.api_get("stream_event", stream=True, timeout=15)
+  File "E:\programming and shit\chess\lichess-bot\venv\lib\site-packages\backoff\_sync.py", line 105, in retry
+    ret = target(*args, **kwargs)
+  File "E:\programming and shit\chess\chessbot\lichess.py", line 138, in api_get
+    response.raise_for_status()
+  File "E:\programming and shit\chess\lichess-bot\venv\lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://lichess.org/api/stream/event
+
+2024-01-06 21:27:33,285 __main__ (lichess-bot.py:356) INFO Terminated
