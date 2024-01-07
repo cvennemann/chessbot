@@ -9,14 +9,19 @@ import chess
 from chess.engine import PlayResult, Limit
 import random
 from engine_wrapper import MinimalEngine, MOVE
-from typing import Any
 import logging
-
+from beepduel import BeepDuel
 
 # Use this logger variable to print messages to the console or log files.
 # logger.info("message") will always print "message" to the console or log file.
 # logger.debug("message") will only print "message" if verbose logging is enabled.
 logger = logging.getLogger(__name__)
+
+
+class CustomEngine(MinimalEngine):
+
+    def search(self, *args) -> PlayResult:
+        return BeepDuel.get_best_move(*args)
 
 
 class ExampleEngine(MinimalEngine):
@@ -26,33 +31,6 @@ class ExampleEngine(MinimalEngine):
 
 
 # Strategy names and ideas from tom7's excellent eloWorld video
-
-class RandomMove(ExampleEngine):
-    """Get a random move."""
-
-    def search(self, board: chess.Board, *args: Any) -> PlayResult:
-        """Choose a random move."""
-        return PlayResult(random.choice(list(board.legal_moves)), None)
-
-
-class Alphabetical(ExampleEngine):
-    """Get the first move when sorted by san representation."""
-
-    def search(self, board: chess.Board, *args: Any) -> PlayResult:
-        """Choose the first move alphabetically."""
-        moves = list(board.legal_moves)
-        moves.sort(key=board.san)
-        return PlayResult(moves[0], None)
-
-
-class FirstMove(ExampleEngine):
-    """Get the first move when sorted by uci representation."""
-
-    def search(self, board: chess.Board, *args: Any) -> PlayResult:
-        """Choose the first move alphabetically in uci representation."""
-        moves = list(board.legal_moves)
-        moves.sort(key=str)
-        return PlayResult(moves[0], None)
 
 
 class ComboEngine(ExampleEngine):
