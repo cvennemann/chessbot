@@ -16,7 +16,7 @@ piece_values = {
 
 
 def get_best_move(board: Board, *args) -> PlayResult:
-    MAX_DEPTH = 2
+    MAX_DEPTH = 3
 
     evaluations = []
 
@@ -45,6 +45,8 @@ def minimax(board: Board, current_depth: int, max_depth: int) -> int:
 
     if board.is_checkmate():
         evaluation = 1000 if board.turn == BLACK else -1000
+    elif board.is_stalemate():
+        evaluation = 0
     elif current_depth == max_depth:
         evaluation = material_difference(board)
     else:

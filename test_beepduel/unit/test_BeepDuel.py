@@ -5,7 +5,7 @@ from chess.engine import PlayResult
 from beepduel.BeepDuel import random_best_move, material_difference, minimax
 
 
-def test_should_return_random_move():
+def test_should_return_any_move():
     move1 = Move(1, 2)
     move2 = Move(3, 4)
     move3 = Move(5, 6)
@@ -32,29 +32,46 @@ def test_should_return_move_if_only_one_legal_move():
 
 def test_material_difference_should_be_0_for_starting_position():
     board = Board()
+
     difference = material_difference(board)
+
     assert difference == 0
 
 
 def test_material_difference_should_be_minus_9_for_missing_queen():
     board = Board()
     board.set_board_fen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNB1KBNR")
+
     difference = material_difference(board)
+
     assert difference == -9
 
 
-def test_minmax_depth_1_should_evaluate_material_difference():
+def test_should_evaluate_material_difference_at_depth_1():
     board = Board()
     board.set_board_fen("7k/8/8/8/1P6/8/8/K7")
     expected_evaluation = 1
 
-    actual_evaluation = minimax(board, 1, 1)
+    actual_evaluation = minimax(board, 0, 1)
+
     assert actual_evaluation == expected_evaluation
+
 
 def test_minmax_depth_2_should_evaluate_material_difference():
     board = Board()
     board.set_board_fen("7k/8/8/8/1P6/8/8/K7")
     expected_evaluation = 1
 
-    actual_evaluation = minimax(board, 1, 2)
+    actual_evaluation = minimax(board, 0, 2)
+
+    assert actual_evaluation == expected_evaluation
+
+
+def test_should_evaluate_own_stalemate_as_0():
+    board = Board()
+    board.set_board_fen("8/8/8/8/8/1q6/2k5/K7")
+    expected_evaluation = 0
+
+    actual_evaluation = minimax(board, 0, 2)
+
     assert actual_evaluation == expected_evaluation
